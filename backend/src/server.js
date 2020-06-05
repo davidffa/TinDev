@@ -18,7 +18,8 @@ io.on('connection', socket => {
 })
 
 mongoose.connect(process.env.mongodbCredential, {
-     useNewUrlParser: true
+     useNewUrlParser: true,
+     useUnifiedTopology: true
 })
 
 app.use((req, res, next) => {
